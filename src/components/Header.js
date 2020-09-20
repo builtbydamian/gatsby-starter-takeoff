@@ -14,7 +14,8 @@ const Header = ({ title }) => (
           <div className="flex">
             <a href="/" className="px-6 py-2">About</a>
             <a href="/" className="px-6 py-2">Blog</a>
-            <a href="/" className="px-6 py-2 bg-white text-blue-500 font-bold rounded-lg">Contact</a>
+            <a href="/" className="px-6 py-2">Contact</a>
+            <a href="https://github.com/builtbydamian/gatsby-starter-takeoff#readme" className="px-6 py-2 bg-white text-blue-500 font-bold rounded-lg">Documentation</a>
           </div>
         </div>
       </div>
