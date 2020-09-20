@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from "components/Layout"
-import SEO from "components/SEO"
-import ArticlePagination from "components/ArticlePagination"
+import Layout from 'components/Layout';
+import SEO from 'components/SEO';
+import ArticlePagination from 'components/ArticlePagination';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.mdx
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = pageContext
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata?.title || 'Title';
+  const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -31,10 +31,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <ArticlePagination next={next} previous={previous} />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -54,4 +54,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

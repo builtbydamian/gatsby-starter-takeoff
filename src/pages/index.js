@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "components/Layout"
-import SEO from "components/SEO"
+import Layout from 'components/Layout';
+import SEO from 'components/SEO';
 import ArticlePreview from 'components/ArticlePreview';
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMdx.nodes
+  const siteTitle = data.site.siteMetadata?.title || 'Title';
+  const posts = data.allMdx.nodes;
 
   if (posts.length === 0) {
     return (
@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
         <p>No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the "gatsby-source-filesystem" plugin in gatsby-config.js).</p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -30,10 +30,10 @@ const BlogIndex = ({ data, location }) => {
         )
       })}
     </Layout>
-  )
+  );
 }
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -56,4 +56,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
