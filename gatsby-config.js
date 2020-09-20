@@ -2,15 +2,15 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Gatsby Takeoff`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Built by Damian`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A custom starter blog with Tailwind CSS and MDX support.`,
+    // TODO: Add Netlify demo
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `builtbydamian`,
     },
   },
   plugins: [
@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Gatsby Starter Takeoff`,
+        short_name: `GatsbyJS Takeoff`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -73,12 +73,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sitemap`,
     {

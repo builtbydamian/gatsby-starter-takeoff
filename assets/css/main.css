@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wysiwyg p { @apply .mb-4 }
+.wysiwyg h2 { @apply .text-3xl .mb-4 .font-bold }
+.wysiwyg h3 { @apply .text-2xl .mb-4 .font-bold }
+.wysiwyg h4 { @apply .text-xl .mb-4 .font-bold }
+.wysiwyg h5 { @apply .text-lg .mb-4 .font-bold }
+.wysiwyg h6 { @apply .mb-4 .font-bold }
+.wysiwyg ul, .wysiwyg ol { @apply .mb-4 }
+.wysiwyg ul li { @apply .list-disc .list-inside }
+.wysiwyg ol li { @apply .list-decimal .list-inside }
+.wysiwyg blockquote { @apply .bg-white .border-l-4 border-gray-500 .p-4 .shadow-lg .mb-4 }
+.wysiwyg blockquote p:last-child { @apply .mb-0 }
