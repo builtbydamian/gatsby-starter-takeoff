@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
@@ -79,6 +81,16 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        content: path.join(__dirname, 'content'),
+        components: path.join(__dirname, 'src/components'),
+        pages: path.join(__dirname, 'src/pages'),
+        utils: path.join(__dirname, 'src/utils'),
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
